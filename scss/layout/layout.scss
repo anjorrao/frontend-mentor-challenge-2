@@ -4,10 +4,39 @@
 	padding: 40px 0;
 }
 
-.row.vertically-middle-md {
+.card-wrapper {
+	
+	.second-column,
+	.inner-first-col,
+	.inner-second-col,
+	.inner-third-col,
+	.inner-fourth-col {
+		margin-bottom: 1.5rem;
+	}
+
 	@include media-breakpoint-up(md) {
-		height: 100vh;
-		align-items: start;
-		align-content: center;
+		display: flex;
+		justify-content: space-between;
+
+		.first-column {
+			flex: 0 0 73.5%;
+			display: inline-flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.inner-first-col,
+			.inner-fourth-col {
+				flex: 0 0 67%;
+			}
+
+			.inner-second-col,
+			.inner-third-col {
+				flex: 0 0 30%;
+			}
+		}
+
+		.second-column {
+			flex: 0 0 24%;
+		}
 	}
 }

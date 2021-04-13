@@ -10246,6 +10246,7 @@ fieldset:disabled .btn {
 .card {
   border: none;
   border-radius: 7px;
+  box-shadow: 12px 28px 58px -20px rgba(0, 0, 0, 0.13);
 }
 
 .card .card-body {
@@ -10259,7 +10260,9 @@ fieldset:disabled .btn {
 
 .card .card-body .fs-4 {
   line-height: 30px;
-  font-size: 1.4rem !important;
+  font-size: 1.2rem !important;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -10271,6 +10274,7 @@ fieldset:disabled .btn {
 .card .card-body .fs-6 {
   line-height: 18px;
   opacity: 0.7;
+  font-size: 0.85rem !important;
 }
 
 .card.purple-card {
@@ -10322,11 +10326,35 @@ fieldset:disabled .btn {
   padding: 40px 0;
 }
 
+.card-wrapper .second-column,
+.card-wrapper .inner-first-col,
+.card-wrapper .inner-second-col,
+.card-wrapper .inner-third-col,
+.card-wrapper .inner-fourth-col {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width: 768px) {
-  .row.vertically-middle-md {
-    height: 100vh;
-    align-items: start;
-    align-content: center;
+  .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-wrapper .first-column {
+    flex: 0 0 73.5%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card-wrapper .first-column .inner-first-col,
+  .card-wrapper .first-column .inner-fourth-col {
+    flex: 0 0 67%;
+  }
+  .card-wrapper .first-column .inner-second-col,
+  .card-wrapper .first-column .inner-third-col {
+    flex: 0 0 30%;
+  }
+  .card-wrapper .second-column {
+    flex: 0 0 24%;
   }
 }
 
