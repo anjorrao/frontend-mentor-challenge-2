@@ -10276,6 +10276,15 @@ fieldset:disabled .btn {
 .card.purple-card {
   background-color: #7541c8;
   color: #fff;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0px right 15%;
+}
+
+@media (max-width: 767.98px) {
+  .card.purple-card {
+    background-position: top 0 right 8%;
+  }
 }
 
 .card.purple-card .profile-image img {
@@ -10325,5 +10334,9 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 13px;
   background-color: #ecf2f8;
+}
+
+.attribution {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

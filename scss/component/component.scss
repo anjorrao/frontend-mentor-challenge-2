@@ -32,6 +32,13 @@
 
 	&.purple-card {
 		@include card-color($primary-color,$white);
+		background-image: url(../images/bg-pattern-quotation.svg);
+		background-repeat: no-repeat;
+		background-position: top 0px right 15%;
+
+		@include media-breakpoint-down(md) {
+			background-position: top 0 right 8%;
+		}
 
 		.profile-image {
 			img {
