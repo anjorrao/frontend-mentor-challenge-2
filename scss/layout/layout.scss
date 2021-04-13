@@ -1,0 +1,13 @@
+@import "../base/base.scss";
+
+.main-content-wrap {
+	padding: 40px 0;
+}
+
+.row.vertically-middle-md {
+	@include media-breakpoint-up(md) {
+		height: 100vh;
+		align-items: start;
+		align-content: center;
+	}
+}
