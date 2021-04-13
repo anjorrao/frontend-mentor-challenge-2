@@ -1,3 +1,72 @@
 @import '../base/base.scss';
 
-@include custom-card();
+.card {
+	border: none;
+	border-radius: 7px;
+
+	.card-body {
+		padding: 2em;
+
+		.profile {
+
+			.education-tag{
+				font-size: 0.8rem;
+				opacity: 0.5;
+			}
+		}
+
+		.fs-4 {
+			line-height: 30px;
+			font-size: 1.4rem !important;
+
+			@include media-breakpoint-up(md) {
+				min-height: 100px;
+			}
+		}
+
+		.fs-6 {
+			line-height: 18px;
+			opacity: 0.7;
+		}
+	}
+
+	&.purple-card {
+		@include card-color($primary-color,$white);
+
+		.profile-image {
+			img {
+				border: 3px solid lighten($primary-color, 10);
+			}
+		}
+	}
+
+	&.gray-card {
+		@include card-color($grayish-blue,$light-grayish-blue);
+
+		.profile-image {
+			img {
+				border: 3px solid $grayish-blue;
+			}
+		}
+	}
+
+	&.dark-gray-card {
+		@include card-color($blackish-blue,$light-grayish-blue);
+
+		.profile-image {
+			img {
+				border: 3px solid $primary-color;
+			}
+		}
+	}
+
+	&.white-card {
+		@include card-color($white-color, $grayish-blue);
+
+		.profile-image {
+			img {
+				border: 3px solid $white-color;
+			}
+		}
+	}
+}

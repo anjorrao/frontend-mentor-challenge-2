@@ -11,23 +11,7 @@ $light-grayish-blue: hsl(210, 46%, 95%);
 
 $font-size: 13px;
 
-@mixin custom-card {
-	.card {
-		border: none;
-		border-radius: 7px;
-
-		.card-body {
-			padding: 2em;
-
-			.fs-4 {
-				@include media-breakpoint-up(md) {
-					min-height: 108px;
-				}
-			}
-
-			.fs-6 {
-				line-height: 1.4;
-			}
-		}
-	}
+@mixin card-color($bg-color, $font-color) {
+	background-color: $bg-color;
+	color: $font-color;
 }
