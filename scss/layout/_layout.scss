@@ -1,7 +1,11 @@
-@import "../base/base.scss";
+@import "../base/base";
 
 .main-content-wrap {
 	padding: 40px 0;
+
+	@include media-breakpoint-up(md) {
+		padding: 150px 0;
+	}
 }
 
 .card-wrapper {
